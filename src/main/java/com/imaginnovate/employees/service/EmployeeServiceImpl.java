@@ -8,11 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.imaginnovate.employees.exception.EmployeeNotFound;
 import com.imaginnovate.employees.model.Employee;
 import com.imaginnovate.employees.repository.EmployeeRepositiry;
+import com.imaginnovate.employees.taxcalculation.EmployeeTaxCalculator;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
 	EmployeeRepositiry repository;
+	
+	@AutoWired
+	EmployeeTaxCalculator taxCalculator;
 	
 	@Override
 	public List<Employee> findAll() {
@@ -49,6 +53,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void deleteById(Long id) {
 		repository.deleteById(id);
+	}
+
+	@Override
+	public void calculateEmpTaxById(Long id) {
+		Optional<Employee> emp = repository.findById(id);
+		if(emp.isPresent()) {
+			 taxCalculator.calculateTax(emp.get());
+		}  else {
+			throw new EmployeeNotFound(id);
+		}
 	}
 
 }

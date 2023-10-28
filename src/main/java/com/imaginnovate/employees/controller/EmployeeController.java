@@ -3,6 +3,7 @@ package com.imaginnovate.employees.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,5 +45,10 @@ public class EmployeeController {
 	@DeleteMapping("/employee/{id}")
 	public void delete(@PathVariable Long id) {
 		services.deleteById(id);
+	}
+	
+	@GetMapping("/employeetax/{id}")
+	public ResponseEntity<Object> calculateEmpTaxById(@PathVariable Long id) {
+		services.calculateEmpTaxById(id);
 	}
 }
