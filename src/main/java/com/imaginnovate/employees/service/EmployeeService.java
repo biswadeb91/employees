@@ -1,4 +1,4 @@
-package com.imaginnovative.employees.service;
+package com.imaginnovate.employees.service;
 
 import java.util.List;
 

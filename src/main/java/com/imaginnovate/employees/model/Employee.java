@@ -1,4 +1,4 @@
-package com.imaginnovative.employees.model;
+package com.imaginnovate.employees.model;
 
 import java.util.Date;
 import java.util.List;

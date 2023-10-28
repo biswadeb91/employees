@@ -1,4 +1,4 @@
-package com.imaginnovative.employees.controller;
+package com.imaginnovate.employees.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.imaginnovative.employees.model.Employee;
-import com.imaginnovative.employees.service.EmployeeService;
+import com.imaginnovate.employees.model.Employee;
+import com.imaginnovate.employees.service.EmployeeService;
 
 @RestController
 public class EmployeeController {

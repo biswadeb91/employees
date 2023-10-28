@@ -1,4 +1,4 @@
-package com.imaginnovative.employees.service;
+package com.imaginnovate.employees.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.imaginnovate.employees.exception.EmployeeNotFound;
-import com.imaginnovative.employees.model.Employee;
-import com.imaginnovative.employees.repository.EmployeeRepositiry;
+import com.imaginnovate.employees.model.Employee;
+import com.imaginnovate.employees.repository.EmployeeRepositiry;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
