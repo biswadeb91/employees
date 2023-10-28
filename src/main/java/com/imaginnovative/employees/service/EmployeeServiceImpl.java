@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.imaginnovate.employee.exception.EmployeeNotFound;
+import com.imaginnovate.employees.exception.EmployeeNotFound;
 import com.imaginnovative.employees.model.Employee;
 import com.imaginnovative.employees.repository.EmployeeRepositiry;
 
