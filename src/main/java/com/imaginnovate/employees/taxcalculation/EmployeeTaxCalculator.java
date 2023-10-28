@@ -27,7 +27,6 @@ public class EmployeeTaxCalculator {//Assuming tax calculation for running year
 			throw new WrongDateOfJoining("Wrong Date of joining. Contact administrator to update.");
 		}
 		Double taxableSlary = 0.0;
-		Date currentdate = new Date();
 
 		Calendar startCal = Calendar.getInstance();
 		startCal.set(Calendar.DATE, 1);
@@ -41,7 +40,7 @@ public class EmployeeTaxCalculator {//Assuming tax calculation for running year
 
 
 			if (doj.before(startCal.getTime())) {
-				taxableSlary = salary;
+				taxableSlary = taxableSlary + salary;
 			} else if (doj.before(endCal.getTime())) {
 				taxableSlary = taxableSlary + calculateSalary(doj, startCal, endCal , salary);
 			}
@@ -58,7 +57,7 @@ public class EmployeeTaxCalculator {//Assuming tax calculation for running year
 
 
 			if (doj.before(startCal.getTime())) {
-				taxableSlary = salary;
+				taxableSlary = taxableSlary + salary;
 			} else if (doj.before(endCal.getTime())) {
 				taxableSlary = taxableSlary + calculateSalary(doj,startCal,  endCal , salary);
 			}
