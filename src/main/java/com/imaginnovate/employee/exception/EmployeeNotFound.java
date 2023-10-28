@@ -1,4 +1,4 @@
-package com.imaginnovate.interview.employee.exception;
+package com.imaginnovate.employee.exception;
 
 public class EmployeeNotFound extends RuntimeException {
 
